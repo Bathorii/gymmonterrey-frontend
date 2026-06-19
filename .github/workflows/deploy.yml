@@ -1,0 +1,43 @@
+name: Deploy GymCDMX to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build GymCDMX
+        env:
+          NEXT_PUBLIC_CITY_SLUG: cdmx
+          NEXT_PUBLIC_CITY_NAME: "Ciudad de México"
+          NEXT_PUBLIC_COUNTRY: MX
+          NEXT_PUBLIC_LANG: es-MX
+          NEXT_PUBLIC_DOMAIN: gymcdmx.mx
+          NEXT_PUBLIC_SITE_NAME: GymCDMX.mx
+        run: npm run build
+
+      - name: Deploy GymCDMX
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy out --project-name gymcdmx
+
+      - name: IndexNow – Ping Bing
+        run: |
+          curl -s "https://www.bing.com/indexnow?url=https://gymcdmx.mx/sitemap.xml&key=c9432c15d3bf4775a6d31186794157af" \
+            -o /dev/null -w "IndexNow status: %{http_code}\n"
