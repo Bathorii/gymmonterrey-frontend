@@ -57,46 +57,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly' as const,
   }))
 
-  // Kerület (localidad) szintű oldalak
-  const implementedLocalidades = [
-    'cuauhtemoc', 'benito-juarez', 'miguel-hidalgo', 'alvaro-obregon',
-    'coyoacan', 'tlalpan', 'iztapalapa', 'gustavo-a-madero',
-    'azcapotzalco', 'venustiano-carranza', 'iztacalco',
-    'magdalena-contreras', 'xochimilco', 'cuajimalpa', 'tlahuac', 'milpa-alta']
+  // Kerület (colonia) szintű oldalak – üres, amíg nincs Monterrey tartalom
+  const implementedLocalidades: string[] = []
+  const localidadPages: MetadataRoute.Sitemap = []
 
-  const localidadPages: MetadataRoute.Sitemap = implementedLocalidades.flatMap(slug =>
-    categories.map(cat => ({
-      url: `${base}/${cat.slug}/${slug}/`,
-      lastModified: now,
-      priority: 0.8,
-      changeFrequency: 'weekly' as const,
-    }))
-  )
-
-  // Városrész (barrio) szintű oldalak
-  // Jun 18: villa-coapa, agricola-oriental, asturias, atlampa, buena-vista, centro, del-carmen, del-gas, del-valle-centro, del-valle-sur
-  // Jun 18 C: doctores, granada, guadalupe-inn, guerrero, hipodromo-condesa, lomas-de-tarango, moctezuma, morelos, napoles, narvarte-oriente
-  // Jun 19: obrera, pantitlan, peralvillo, portales-norte, portales-sur, roma-sur, san-rafael, santa-maria-la-ribera, tabacalera, tepepan
-  const implementedBarrios = [
-    'agricola-oriental', 'anzures', 'asturias', 'atlampa', 'buena-vista',
-    'centro', 'claveria', 'condesa', 'coyoacan-centro', 'del-carmen',
-    'del-gas', 'del-valle-centro', 'del-valle-norte', 'del-valle-sur', 'doctores',
-    'fuentes-del-pedregal', 'granada', 'guadalupe-inn', 'guerrero', 'hipodromo-condesa',
-    'jardin-balbuena', 'jardines-del-pedregal', 'juarez', 'las-aguilas', 'lomas-de-chapultepec',
-    'lomas-de-tarango', 'moctezuma', 'morelos', 'napoles', 'narvarte-oriente',
-    'narvarte-poniente', 'polanco', 'roma-norte', 'san-angel', 'san-jeronimo-aculco',
-    'san-jeronimo-lidice', 'santa-fe-cuajimalpa', 'toriello-guerra', 'viaducto-piedad', 'villa-coapa',
-    'obrera', 'pantitlan', 'peralvillo', 'portales-norte', 'portales-sur',
-    'roma-sur', 'san-rafael', 'santa-maria-la-ribera', 'tabacalera', 'tepepan']
-
-  const barrioPages: MetadataRoute.Sitemap = implementedBarrios.flatMap(slug =>
-    categories.map(cat => ({
-      url: `${base}/${cat.slug}/${slug}/`,
-      lastModified: now,
-      priority: 0.7,
-      changeFrequency: 'weekly' as const,
-    }))
-  )
+  // Városrész (colonia) szintű oldalak – üres, amíg nincs Monterrey tartalom
+  const implementedBarrios: string[] = []
+  const barrioPages: MetadataRoute.Sitemap = []
 
   const publishedGyms = getPublishedGyms()
   const gymPages: MetadataRoute.Sitemap = publishedGyms.map(g => ({
