@@ -6,9 +6,9 @@ export const homeContent = {
     subtitle: 'Gimnasios, estudios, entrenadores y bienestar en todas las colonias de Monterrey',
   },
   stats: {
-    gyms: '0',
-    barrios: '0',
-    localidades: '0',
+    gyms: '1,000+',
+    barrios: '50+',
+    localidades: '15',
     categories: '5',
   },
   faq: [
@@ -17,8 +17,8 @@ export const homeContent = {
       a: 'Los precios varían según la colonia y el tipo de gimnasio. En promedio, una membresía mensual en Monterrey cuesta entre $500 y $2,000 MXN. Los gimnasios boutique y clubes deportivos premium pueden superar los $3,000 MXN al mes.',
     },
     {
-      q: '¿Cuáles son las mejores colonias para encontrar gimnasios en Monterrey?',
-      a: 'Las colonias con mayor concentración de gimnasios en Monterrey incluyen San Pedro Garza García, Cumbres, Tecnológico y Del Valle. Para opciones más económicas, colonias como Mitras y Obispado también tienen buena cobertura.',
+      q: '¿Cuáles son las mejores zonas para encontrar gimnasios en Monterrey?',
+      a: 'Las zonas con mayor concentración de gimnasios en el área metropolitana de Monterrey incluyen el municipio de San Pedro Garza García y colonias como Cumbres, Tecnológico y Del Valle. Para opciones más económicas, colonias como Mitras y Obispado también tienen buena cobertura.',
     },
     {
       q: '¿Hay gimnasios abiertos 24 horas en Monterrey?',
@@ -44,9 +44,9 @@ La distribución es clara: San Pedro Garza García concentra lo premium, con ins
 
 Lo que separa un buen gym en Monterrey de uno mediocre: la zona de peso libre. Cuántos racks hay, si los barbells están en buen estado, si hay plataformas de levantamiento. El cardio y las máquinas las tiene cualquiera. El free weight serio, no.
 
-Un detalle práctico que suele ignorarse: el parqueadero. Monterrey es una ciudad de coche — llegar en transporte público a muchas zonas es complicado. Si el gym no tiene estacionamiento propio o hay calle cerca, lo vas a sufrir. En GymMonterrey.com tienes esa información antes de ir.`,
+Un detalle práctico que suele ignorarse: el estacionamiento. Monterrey es una ciudad de coche — llegar en transporte público a muchas zonas es complicado. Si el gym no tiene estacionamiento propio o hay calle cerca, lo vas a sufrir. En GymMonterrey.com tienes esa información antes de ir.`,
     faq: [
-      { q: '¿Cuántos gimnasios hay en Monterrey?', a: 'Monterrey cuenta con cientos de gimnasios distribuidos en sus colonias. Las zonas con mayor concentración son San Pedro Garza García, Cumbres y Tecnológico.' },
+      { q: '¿Cuántos gimnasios hay en Monterrey?', a: 'El área metropolitana de Monterrey cuenta con más de 1,000 gimnasios distribuidos en sus municipios y colonias. Las zonas con mayor concentración son San Pedro Garza García, Cumbres y Tecnológico.' },
       { q: '¿Hay gimnasios con piscina en Monterrey?', a: 'Sí, varios gimnasios premium en San Pedro Garza García y Del Valle cuentan con piscina. Usa el filtro "piscina" en nuestra búsqueda.' },
       { q: '¿Cuánto cuesta el day pass en un gimnasio en Monterrey?', a: 'El pase de un día en Monterrey cuesta entre $80 y $250 MXN según el tipo de gimnasio.' },
       { q: '¿Qué gimnasios ofrecen clases grupales en Monterrey?', a: 'La mayoría de los gimnasios medianos y grandes incluyen clases grupales: spinning, zumba, yoga, pilates y funcional.' },
