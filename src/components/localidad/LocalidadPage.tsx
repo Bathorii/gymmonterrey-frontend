@@ -21,8 +21,8 @@ function getDeployedBarriosForDistrict(districtSlug: string): { slug: string; na
 }
 
 // ── PORTAL-SPECIFIC CONSTANTS ─────────────────────────────────────────────────
-const AUTOR_NOMBRE = 'Sebastián'
-const VECINOS_LABEL = 'Localidades cercanas'
+const AUTOR_NOMBRE = 'Andrés'
+const VECINOS_LABEL = 'Municipios cercanos'
 
 // Localidades with a built static page — only these render as clickable links.
 // Add new slugs here after each batch deploy.

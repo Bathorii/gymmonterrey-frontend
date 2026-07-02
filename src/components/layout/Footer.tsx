@@ -22,7 +22,7 @@ export function Footer() {
             ))}
           </div>
           <div>
-            <p style={{ color: 'white', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 14 }}>Localidades</p>
+            <p style={{ color: 'white', fontSize: 13, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: 14 }}>Municipios</p>
             {['Benito Juárez', 'Cuauhtémoc', 'Miguel Hidalgo', 'Coyoacán', 'Tlalpan'].map(label => (
               <span key={label} style={{ display: 'block', color: '#9ca3af', fontSize: 14, marginBottom: 8 }}>{label}</span>
             ))}

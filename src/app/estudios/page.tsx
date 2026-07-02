@@ -51,7 +51,7 @@ export default function EstudiosPillarPage() {
           </div>
 
           <aside>
-            <h2 style={{ fontSize: 20, marginBottom: 16 }}>{cat.label} por localidad</h2>
+            <h2 style={{ fontSize: 20, marginBottom: 16 }}>{cat.label} por municipio</h2>
             {localidades.map(loc => {
               const hasPage = IMPLEMENTED_LOCALIDADES.has(loc.slug)
               return hasPage ? (
