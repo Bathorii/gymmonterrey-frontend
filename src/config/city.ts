@@ -17,7 +17,7 @@ export const city = {
   voseoRequired:       false,
   altitudeM:           540,
   altitudeRelevant:    false,
-  authorName:          'Diego',
+  authorName:          'Andrés',
   baseUrl: `https://${process.env.NEXT_PUBLIC_DOMAIN || 'gymmonterrey.com'}`,
 } as const
 
